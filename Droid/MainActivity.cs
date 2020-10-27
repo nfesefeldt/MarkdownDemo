@@ -48,29 +48,53 @@ namespace MarkdownDemo.Droid
             Button button = FindViewById<Button>(Resource.Id.myButton);
 
             button.Click += delegate {
-                ApplyMarkdown();
+                UpdateList();
             };
         }
 
-        void ApplyMarkdown()
+        void UpdateList()
         {
             listItems.Clear();
             listItems.Add(new RecyclerItem
             {
-                Title = "This is a text with some *emphasis*",
-                Subtitle = "Subtitle"
+                Title = "*This is all italic*",
+                Subtitle = "**This is all bold**"
             });
 
             listItems.Add(new RecyclerItem
             {
                 Title = "This is a block of text that **includes** the __features__ we are *likely* to _want_, and omits the ones we do not want.",
-                Subtitle = "Subtitle"
+                Subtitle = "We could probably also see how the parsers handle multiple lines. This one ends with no space." +
+                           "This one ends with one space. " +
+                           "And this one ends with two spaces.  " +
+                           "And this should be the end."
             });
 
             listItems.Add(new RecyclerItem
             {
                 Title = "This is a string with some **bold stuff**",
-                Subtitle = "Subtitle"
+                Subtitle = "Here is more __bold__ and _italics_"
+            });
+
+            listItems.Add(new RecyclerItem
+            {
+                Title = "*This is all italic*",
+                Subtitle = "**This is all bold**"
+            });
+
+            listItems.Add(new RecyclerItem
+            {
+                Title = "This is a block of text that **includes** the __features__ we are *likely* to _want_, and omits the ones we do not want.",
+                Subtitle = "We could probably also see how the parsers handle multiple lines. This one ends with no space." +
+                           "This one ends with one space. " +
+                           "And this one ends with two spaces.  " +
+                           "And this should be the end."
+            });
+
+            listItems.Add(new RecyclerItem
+            {
+                Title = "This is a string with some **bold stuff**",
+                Subtitle = "Here is more __bold__ and _italics_"
             });
 
             this._Adapter.NotifyDataSetChanged();

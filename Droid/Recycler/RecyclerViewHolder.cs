@@ -1,6 +1,4 @@
-﻿using System;
-using Android.Support.V7.Widget;
-using Android.Text;
+﻿using Android.Support.V7.Widget;
 using Android.Views;
 using Android.Widget;
 
@@ -20,7 +18,7 @@ namespace MarkdownDemo.Droid.Recycler
         public void Bind(RecyclerItem item)
         {
             this.Title.ApplyMarkdown(item.Title);
-            this.Subtitle.Text = item.Subtitle;
+            this.Subtitle.ApplyMarkdown(item.Subtitle);
         }
     }
 }
