@@ -141,6 +141,7 @@
     <Compile Include="Recycler\BasicAdapter.cs" />
     <Compile Include="Recycler\RecyclerItem.cs" />
     <Compile Include="Recycler\RecyclerViewHolder.cs" />
+    <Compile Include="TextViewExtension.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />

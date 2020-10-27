@@ -5,6 +5,7 @@ using Android.Support.V7.Widget;
 using Android.OS;
 using MarkdownDemo.Droid.Recycler;
 using System.Collections.Generic;
+using Android.Text;
 
 namespace MarkdownDemo.Droid
 {
@@ -56,20 +57,20 @@ namespace MarkdownDemo.Droid
             listItems.Clear();
             listItems.Add(new RecyclerItem
             {
-                Title = "Markdown String here",
-                Subtitle = "And here"
+                Title = "This is a text with some *emphasis*",
+                Subtitle = "Subtitle"
             });
 
             listItems.Add(new RecyclerItem
             {
-                Title = "Markdown String here",
-                Subtitle = "And here"
+                Title = "This is a block of text that **includes** the __features__ we are *likely* to _want_, and omits the ones we do not want.",
+                Subtitle = "Subtitle"
             });
 
             listItems.Add(new RecyclerItem
             {
-                Title = "Markdown String here",
-                Subtitle = "And here"
+                Title = "This is a string with some **bold stuff**",
+                Subtitle = "Subtitle"
             });
 
             this._Adapter.NotifyDataSetChanged();
