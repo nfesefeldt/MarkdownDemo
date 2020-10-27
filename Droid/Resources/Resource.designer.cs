@@ -389,64 +389,70 @@ namespace MarkdownDemo.Droid
 			public const int line3 = 2131034139;
 			
 			// aapt resource value: 0x7F05001C
-			public const int none = 2131034140;
+			public const int myButton = 2131034140;
 			
 			// aapt resource value: 0x7F05001D
-			public const int normal = 2131034141;
+			public const int none = 2131034141;
 			
 			// aapt resource value: 0x7F05001E
-			public const int notification_background = 2131034142;
+			public const int normal = 2131034142;
 			
 			// aapt resource value: 0x7F05001F
-			public const int notification_main_column = 2131034143;
+			public const int notification_background = 2131034143;
 			
 			// aapt resource value: 0x7F050020
-			public const int notification_main_column_container = 2131034144;
+			public const int notification_main_column = 2131034144;
 			
 			// aapt resource value: 0x7F050021
-			public const int recyclerView = 2131034145;
+			public const int notification_main_column_container = 2131034145;
 			
 			// aapt resource value: 0x7F050022
-			public const int right = 2131034146;
+			public const int recyclerView = 2131034146;
 			
 			// aapt resource value: 0x7F050023
-			public const int right_icon = 2131034147;
+			public const int relativeLayout1 = 2131034147;
 			
 			// aapt resource value: 0x7F050024
-			public const int right_side = 2131034148;
+			public const int right = 2131034148;
 			
 			// aapt resource value: 0x7F050025
-			public const int row_subtitle = 2131034149;
+			public const int right_icon = 2131034149;
 			
 			// aapt resource value: 0x7F050026
-			public const int row_title = 2131034150;
+			public const int right_side = 2131034150;
 			
 			// aapt resource value: 0x7F050027
-			public const int start = 2131034151;
+			public const int row_subtitle = 2131034151;
 			
 			// aapt resource value: 0x7F050028
-			public const int tag_transition_group = 2131034152;
+			public const int row_title = 2131034152;
 			
 			// aapt resource value: 0x7F050029
-			public const int tag_unhandled_key_event_manager = 2131034153;
+			public const int start = 2131034153;
 			
 			// aapt resource value: 0x7F05002A
-			public const int tag_unhandled_key_listeners = 2131034154;
+			public const int tag_transition_group = 2131034154;
 			
 			// aapt resource value: 0x7F05002B
-			public const int text = 2131034155;
+			public const int tag_unhandled_key_event_manager = 2131034155;
 			
 			// aapt resource value: 0x7F05002C
-			public const int text2 = 2131034156;
+			public const int tag_unhandled_key_listeners = 2131034156;
 			
 			// aapt resource value: 0x7F05002D
-			public const int time = 2131034157;
+			public const int text = 2131034157;
 			
 			// aapt resource value: 0x7F05002E
-			public const int title = 2131034158;
+			public const int text2 = 2131034158;
 			
 			// aapt resource value: 0x7F05002F
-			public const int top = 2131034159;
+			public const int time = 2131034159;
+			
+			// aapt resource value: 0x7F050030
+			public const int title = 2131034160;
+			
+			// aapt resource value: 0x7F050031
+			public const int top = 2131034161;
 			
 			static Id()
 			{

@@ -14,11 +14,13 @@ namespace MarkdownDemo.Droid
         RecyclerView _Recycler;
         BasicAdapter _Adapter;
 
+        List<RecyclerItem> listItems;
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
 
-            var list = new List<RecyclerItem>() {
+            listItems = new List<RecyclerItem>() {
                 new RecyclerItem {
                     Title = "This is a normal string title",
                     Subtitle = "This is a normal string subtitle"
@@ -33,9 +35,8 @@ namespace MarkdownDemo.Droid
                 }
             };
 
-            this._Adapter = new BasicAdapter(list);
+            this._Adapter = new BasicAdapter(listItems);
            
-            // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main);
 
             this._Recycler = FindViewById<RecyclerView>(Resource.Id.recyclerView);
@@ -43,11 +44,35 @@ namespace MarkdownDemo.Droid
             var layoutManager = new LinearLayoutManager(this);
             this._Recycler.SetLayoutManager(layoutManager);
 
-            // Get our button from the layout resource,
-            // and attach an event to it
-            //Button button = FindViewById<Button>(Resource.Id.myButton);
+            Button button = FindViewById<Button>(Resource.Id.myButton);
 
-            //button.Click += delegate { button.Text = $"{count++} clicks!"; };
+            button.Click += delegate {
+                ApplyMarkdown();
+            };
+        }
+
+        void ApplyMarkdown()
+        {
+            listItems.Clear();
+            listItems.Add(new RecyclerItem
+            {
+                Title = "Markdown String here",
+                Subtitle = "And here"
+            });
+
+            listItems.Add(new RecyclerItem
+            {
+                Title = "Markdown String here",
+                Subtitle = "And here"
+            });
+
+            listItems.Add(new RecyclerItem
+            {
+                Title = "Markdown String here",
+                Subtitle = "And here"
+            });
+
+            this._Adapter.NotifyDataSetChanged();
         }
     }
 }
