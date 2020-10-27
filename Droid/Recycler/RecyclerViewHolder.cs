@@ -1,4 +1,7 @@
-﻿using Android.Support.V7.Widget;
+﻿using Android.Graphics;
+using Android.Support.V4.Content.Res;
+using Android.Support.V7.Widget;
+using Android.Util;
 using Android.Views;
 using Android.Widget;
 
@@ -17,6 +20,8 @@ namespace MarkdownDemo.Droid.Recycler
 
         public void Bind(RecyclerItem item)
         {
+            this.Title.SetTextColor(Color.Blue);
+            this.Title.SetTextSize(ComplexUnitType.Sp, 20);
             this.Title.ApplyMarkdown(item.Title);
             this.Subtitle.ApplyMarkdown(item.Subtitle);
         }
