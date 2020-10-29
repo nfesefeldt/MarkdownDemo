@@ -9,17 +9,24 @@ using System.CodeDom.Compiler;
 
 namespace MarkdownDemo.iOS
 {
-	[Register ("ViewController")]
-	partial class ViewController
+	partial class CustomCell
 	{
 		[Outlet]
-		UIKit.UITableView tableView { get; set; }
+		UIKit.UITextView firstLabel { get; set; }
+
+		[Outlet]
+		UIKit.UITextView secondLabel { get; set; }
 		
 		void ReleaseDesignerOutlets ()
 		{
-			if (tableView != null) {
-				tableView.Dispose ();
-				tableView = null;
+			if (firstLabel != null) {
+				firstLabel.Dispose ();
+				firstLabel = null;
+			}
+
+			if (secondLabel != null) {
+				secondLabel.Dispose ();
+				secondLabel = null;
 			}
 		}
 	}
