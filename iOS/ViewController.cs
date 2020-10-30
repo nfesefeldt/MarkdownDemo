@@ -16,6 +16,18 @@ namespace MarkdownDemo.iOS
             base.ViewDidLoad();
 
             tableView.Source = new TableSource(Util.GetTestItems());
+
+            button.TouchUpInside += Button_TouchUpInside;
+        }
+
+        private void Button_TouchUpInside(object sender, EventArgs e)
+        {
+            this.UpdateList();
+        }
+
+        private void UpdateList()
+        {
+            this.tableView.ReloadData();
         }
 
         public override void DidReceiveMemoryWarning()
@@ -36,9 +48,18 @@ namespace MarkdownDemo.iOS
             public override UITableViewCell GetCell(UITableView tableView, NSIndexPath indexPath)
             {
                 var cell = tableView.DequeueReusableCell("CustomCell") as CustomCell;
-//                cell.textLabel.Text = items[indexPath.Row].Item1;
-              //  cell.textSubLabel.Text = items[indexPath.Row].Item2;
-                
+
+                cell.label1.ApplyMarkdown(items[indexPath.Row].Item1);
+
+
+                cell.label1.Layer.BorderColor = UIColor.Black.CGColor;
+                cell.label1.Layer.BorderWidth = (nfloat)0.5;
+
+                cell.label2.ApplyMarkdown(items[indexPath.Row].Item2);
+
+                cell.label2.Layer.BorderColor = UIColor.Black.CGColor;
+                cell.label2.Layer.BorderWidth = (nfloat)0.5;
+
                 return cell;
             }
 

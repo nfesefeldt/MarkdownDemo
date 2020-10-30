@@ -78,6 +78,9 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Xamarin.iOS" />
+    <Reference Include="Markdig">
+      <HintPath>..\packages\Markdig.0.22.0\lib\netstandard2.1\Markdig.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MarkdownDemo\MarkdownDemo.csproj">
@@ -100,6 +103,7 @@
   <ItemGroup>
     <None Include="Info.plist" />
     <None Include="Entitlements.plist" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
@@ -109,7 +113,10 @@
       <DependentUpon>ViewController.cs</DependentUpon>
     </Compile>
     <Compile Include="CustomCell.cs" />
-    <Compile Include="CustomCell.designer.cs" />
+    <Compile Include="CustomCell.designer.cs">
+      <DependentUpon>CustomCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UITextViewExtension.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

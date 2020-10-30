@@ -13,6 +13,9 @@ namespace MarkdownDemo.iOS
 	partial class ViewController
 	{
 		[Outlet]
+		UIKit.UIButton button { get; set; }
+
+		[Outlet]
 		UIKit.UITableView tableView { get; set; }
 		
 		void ReleaseDesignerOutlets ()
@@ -20,6 +23,11 @@ namespace MarkdownDemo.iOS
 			if (tableView != null) {
 				tableView.Dispose ();
 				tableView = null;
+			}
+
+			if (button != null) {
+				button.Dispose ();
+				button = null;
 			}
 		}
 	}

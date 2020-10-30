@@ -21,31 +21,32 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gmX-Zr-BHH">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="170" width="414" height="692"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CustomCell" rowHeight="198" id="cEh-GN-rfv" customClass="CustomCell">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="198"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CustomCell" rowHeight="114" id="cEh-GN-rfv" customClass="CustomCell">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="114"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cEh-GN-rfv" id="4Xr-QK-ms5">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="198"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="114"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="HOG-ib-wsX">
-                                                    <rect key="frame" x="0.0" y="102" width="414" height="85"/>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Text 1" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ejJ-sy-lf6">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="57"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut que civiuda.</string>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="57" id="eWz-CE-iih"/>
+                                                    </constraints>
                                                     <color key="textColor" systemColor="labelColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ejJ-sy-lf6">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="85"/>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Text 2" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="HOG-ib-wsX">
+                                                    <rect key="frame" x="0.0" y="57" width="414" height="57"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="85" id="eWz-CE-iih"/>
+                                                        <constraint firstAttribute="height" constant="57" id="NSQ-eq-CIW"/>
                                                     </constraints>
-                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut que civiuda.</string>
                                                     <color key="textColor" systemColor="labelColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -53,32 +54,43 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="ejJ-sy-lf6" secondAttribute="trailing" id="3Nk-bp-TSo"/>
+                                                <constraint firstItem="HOG-ib-wsX" firstAttribute="height" secondItem="ejJ-sy-lf6" secondAttribute="height" id="5RJ-bO-D7u"/>
                                                 <constraint firstItem="ejJ-sy-lf6" firstAttribute="top" secondItem="4Xr-QK-ms5" secondAttribute="top" id="5ct-YH-4mj"/>
                                                 <constraint firstItem="ejJ-sy-lf6" firstAttribute="leading" secondItem="4Xr-QK-ms5" secondAttribute="leading" id="BG1-8w-KuI"/>
                                                 <constraint firstItem="HOG-ib-wsX" firstAttribute="leading" secondItem="4Xr-QK-ms5" secondAttribute="leading" id="DyX-Tj-hbI"/>
-                                                <constraint firstAttribute="bottom" secondItem="HOG-ib-wsX" secondAttribute="bottom" constant="11" id="Zpf-3d-RTf"/>
+                                                <constraint firstAttribute="bottom" secondItem="HOG-ib-wsX" secondAttribute="bottom" id="Zpf-3d-RTf"/>
                                                 <constraint firstAttribute="trailing" secondItem="HOG-ib-wsX" secondAttribute="trailing" id="n0B-Ok-aEx"/>
-                                                <constraint firstItem="HOG-ib-wsX" firstAttribute="top" secondItem="ejJ-sy-lf6" secondAttribute="bottom" constant="17" id="zri-WJ-DPl"/>
+                                                <constraint firstItem="HOG-ib-wsX" firstAttribute="top" secondItem="ejJ-sy-lf6" secondAttribute="bottom" id="zri-WJ-DPl"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="firstLabel" destination="ejJ-sy-lf6" id="dcY-e8-Fkr"/>
-                                            <outlet property="secondLabel" destination="HOG-ib-wsX" id="j0t-BH-lNb"/>
-                                            <outlet property="textLabel" destination="ejJ-sy-lf6" id="QyS-Qj-Eyx"/>
+                                            <outlet property="label1" destination="ejJ-sy-lf6" id="jwB-tQ-QaM"/>
+                                            <outlet property="label2" destination="HOG-ib-wsX" id="Fd1-8u-g2H"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i7h-tK-oCg">
+                                <rect key="frame" x="184" y="98" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="61U-AK-amx"/>
+                                    <constraint firstAttribute="width" constant="46" id="i1a-A3-WrQ"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="i7h-tK-oCg" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="54" id="6zC-VY-30F"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="gmX-Zr-BHH" secondAttribute="bottom" id="c3n-H6-2EI"/>
                             <constraint firstItem="gmX-Zr-BHH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="gT2-gn-q0q"/>
                             <constraint firstAttribute="trailing" secondItem="gmX-Zr-BHH" secondAttribute="trailing" id="ho3-M9-Rmq"/>
-                            <constraint firstItem="gmX-Zr-BHH" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="mnQ-bj-t85"/>
+                            <constraint firstItem="gmX-Zr-BHH" firstAttribute="top" secondItem="i7h-tK-oCg" secondAttribute="bottom" constant="42" id="nIY-XM-pq3"/>
+                            <constraint firstItem="i7h-tK-oCg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zN3-Oz-qnS"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="button" destination="i7h-tK-oCg" id="ZD2-og-HCc"/>
                         <outlet property="tableView" destination="gmX-Zr-BHH" id="YNR-fC-1Pf"/>
                     </connections>
                 </viewController>

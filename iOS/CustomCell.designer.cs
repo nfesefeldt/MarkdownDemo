@@ -12,21 +12,21 @@ namespace MarkdownDemo.iOS
 	partial class CustomCell
 	{
 		[Outlet]
-		UIKit.UITextView firstLabel { get; set; }
+		public UIKit.UITextView label1 { get; set; }
 
 		[Outlet]
-		UIKit.UITextView secondLabel { get; set; }
+		public UIKit.UITextView label2 { get; set; }
 		
 		void ReleaseDesignerOutlets ()
 		{
-			if (firstLabel != null) {
-				firstLabel.Dispose ();
-				firstLabel = null;
+			if (label1 != null) {
+				label1.Dispose ();
+				label1 = null;
 			}
 
-			if (secondLabel != null) {
-				secondLabel.Dispose ();
-				secondLabel = null;
+			if (label2 != null) {
+				label2.Dispose ();
+				label2 = null;
 			}
 		}
 	}
